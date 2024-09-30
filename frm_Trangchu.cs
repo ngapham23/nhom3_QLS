@@ -17,11 +17,7 @@ namespace QLsach
         {
             InitializeComponent();
         }
-       /// <summary>
-       /// 
-       /// </summary>
-       /// <param name="sender"></param>
-       /// <param name="e"></param>
+      
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {

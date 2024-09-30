@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace QuanLySach
 {
+   /* phamquangnga*/
     internal class LopChung
     {
         string chuoikn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""E:\Đồ Án\LaptrinhNet\QuanLySach\QuanLySach\QLSach.mdf"";Integrated Security=True";
