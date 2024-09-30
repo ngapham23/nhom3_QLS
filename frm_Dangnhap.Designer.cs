@@ -34,6 +34,7 @@
             this.txt_matkhau = new System.Windows.Forms.TextBox();
             this.btn_dangnhap = new System.Windows.Forms.Button();
             this.btn_thoat = new System.Windows.Forms.Button();
+            this.btn_dangky = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -70,19 +71,21 @@
             this.txt_matkhau.Name = "txt_matkhau";
             this.txt_matkhau.Size = new System.Drawing.Size(239, 22);
             this.txt_matkhau.TabIndex = 3;
+            this.txt_matkhau.UseSystemPasswordChar = true;
             // 
             // btn_dangnhap
             // 
-            this.btn_dangnhap.Location = new System.Drawing.Point(230, 286);
+            this.btn_dangnhap.Location = new System.Drawing.Point(200, 286);
             this.btn_dangnhap.Name = "btn_dangnhap";
             this.btn_dangnhap.Size = new System.Drawing.Size(110, 44);
             this.btn_dangnhap.TabIndex = 4;
             this.btn_dangnhap.Text = "Đăng Nhập";
             this.btn_dangnhap.UseVisualStyleBackColor = true;
+            this.btn_dangnhap.Click += new System.EventHandler(this.btn_dangnhap_Click);
             // 
             // btn_thoat
             // 
-            this.btn_thoat.Location = new System.Drawing.Point(459, 286);
+            this.btn_thoat.Location = new System.Drawing.Point(529, 286);
             this.btn_thoat.Name = "btn_thoat";
             this.btn_thoat.Size = new System.Drawing.Size(110, 44);
             this.btn_thoat.TabIndex = 5;
@@ -90,11 +93,22 @@
             this.btn_thoat.UseVisualStyleBackColor = true;
             this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
             // 
+            // btn_dangky
+            // 
+            this.btn_dangky.Location = new System.Drawing.Point(391, 203);
+            this.btn_dangky.Name = "btn_dangky";
+            this.btn_dangky.Size = new System.Drawing.Size(110, 25);
+            this.btn_dangky.TabIndex = 6;
+            this.btn_dangky.Text = "Đăng Ký";
+            this.btn_dangky.UseVisualStyleBackColor = true;
+            this.btn_dangky.Click += new System.EventHandler(this.btn_dangky_Click);
+            // 
             // frm_Dangnhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_dangky);
             this.Controls.Add(this.btn_thoat);
             this.Controls.Add(this.btn_dangnhap);
             this.Controls.Add(this.txt_matkhau);
@@ -116,6 +130,7 @@
         private System.Windows.Forms.TextBox txt_matkhau;
         private System.Windows.Forms.Button btn_dangnhap;
         private System.Windows.Forms.Button btn_thoat;
+        private System.Windows.Forms.Button btn_dangky;
     }
 }
 

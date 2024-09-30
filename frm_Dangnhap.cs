@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -30,6 +31,54 @@ namespace QLsach
             if (dialog == DialogResult.Yes)
             {
                 Application.Exit();
+            }
+        }
+
+        private void btn_dangnhap_Click(object sender, EventArgs e)
+        {
+            string chuoikn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""E:\Đồ Án\LaptrinhNet\QLsach\QLSach.mdf"";Integrated Security=True";
+            SqlConnection conn = new SqlConnection(chuoikn);
+            try
+            {
+                conn.Open();
+                string tk = txt_taikhoan.Text;
+                string mk = txt_matkhau.Text;
+
+                string sql = "Select * from TaiKhoan where TenDN = '" + tk + "' and MatKhau = '" + mk + "'";
+                SqlCommand comm = new SqlCommand(sql, conn);
+                SqlDataReader dat = comm.ExecuteReader();
+                if (dat.Read() == true)
+                {
+                   
+                    frm_Trangchu home = new frm_Trangchu();
+                    home.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Sai mật khẩu hoặc tên đăng nhập !!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi kết nối !!!", "Thông Báo");
+
+            }
+        }
+
+        private void btn_dangky_Click(object sender, EventArgs e)
+        {
+
+
+            if (Application.OpenForms["frm_Dangky"] == null)
+            {
+             
+                frm_Dangky frmDangKy = new frm_Dangky();
+                frmDangKy.Show();  
+            }
+            else
+            {
+                Application.OpenForms["frm_Dangky"].Activate();
             }
         }
     }

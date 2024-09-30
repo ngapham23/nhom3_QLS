@@ -61,11 +61,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_Dangky.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Dangky.Designer.cs">
+      <DependentUpon>frm_Dangky.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Dangnhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_Dangnhap.Designer.cs">
       <DependentUpon>frm_Dangnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Sach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Sach.Designer.cs">
+      <DependentUpon>frm_Sach.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Trangchu.cs">
       <SubType>Form</SubType>
@@ -73,10 +85,17 @@
     <Compile Include="frm_Trangchu.Designer.cs">
       <DependentUpon>frm_Trangchu.cs</DependentUpon>
     </Compile>
+    <Compile Include="LopChung.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_Dangky.resx">
+      <DependentUpon>frm_Dangky.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Dangnhap.resx">
       <DependentUpon>frm_Dangnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Sach.resx">
+      <DependentUpon>frm_Sach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Trangchu.resx">
       <DependentUpon>frm_Trangchu.cs</DependentUpon>
