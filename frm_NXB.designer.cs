@@ -60,7 +60,7 @@
             this.groupBox1.Controls.Add(this.txt_MaNXB);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(594, 164);
+            this.groupBox1.Location = new System.Drawing.Point(777, 298);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -148,7 +148,7 @@
             // dt_GridNXB
             // 
             this.dt_GridNXB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dt_GridNXB.Location = new System.Drawing.Point(38, 164);
+            this.dt_GridNXB.Location = new System.Drawing.Point(221, 298);
             this.dt_GridNXB.Margin = new System.Windows.Forms.Padding(4);
             this.dt_GridNXB.Name = "dt_GridNXB";
             this.dt_GridNXB.RowHeadersWidth = 51;
@@ -160,7 +160,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(345, 30);
+            this.label1.Location = new System.Drawing.Point(528, 164);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(298, 31);
@@ -170,7 +170,7 @@
             // btn_Xoa
             // 
             this.btn_Xoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Xoa.Location = new System.Drawing.Point(984, 424);
+            this.btn_Xoa.Location = new System.Drawing.Point(1167, 558);
             this.btn_Xoa.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(127, 34);
@@ -182,7 +182,7 @@
             // btn_Sua
             // 
             this.btn_Sua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Sua.Location = new System.Drawing.Point(806, 424);
+            this.btn_Sua.Location = new System.Drawing.Point(989, 558);
             this.btn_Sua.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(127, 34);
@@ -194,7 +194,7 @@
             // btn_Them
             // 
             this.btn_Them.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Them.Location = new System.Drawing.Point(620, 424);
+            this.btn_Them.Location = new System.Drawing.Point(803, 558);
             this.btn_Them.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(127, 34);
@@ -207,7 +207,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(685, 86);
+            this.label6.Location = new System.Drawing.Point(868, 220);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(101, 25);
             this.label6.TabIndex = 21;
@@ -216,7 +216,7 @@
             // btn_HienThi
             // 
             this.btn_HienThi.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_HienThi.Location = new System.Drawing.Point(51, 109);
+            this.btn_HienThi.Location = new System.Drawing.Point(234, 243);
             this.btn_HienThi.Name = "btn_HienThi";
             this.btn_HienThi.Size = new System.Drawing.Size(181, 38);
             this.btn_HienThi.TabIndex = 23;
@@ -227,7 +227,7 @@
             // txt_TimKiem
             // 
             this.txt_TimKiem.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TimKiem.Location = new System.Drawing.Point(827, 83);
+            this.txt_TimKiem.Location = new System.Drawing.Point(1010, 217);
             this.txt_TimKiem.Name = "txt_TimKiem";
             this.txt_TimKiem.Size = new System.Drawing.Size(209, 33);
             this.txt_TimKiem.TabIndex = 22;
@@ -238,7 +238,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1196, 704);
+            this.ClientSize = new System.Drawing.Size(1560, 921);
+            this.ControlBox = false;
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btn_HienThi);
             this.Controls.Add(this.txt_TimKiem);
@@ -250,6 +251,7 @@
             this.Controls.Add(this.btn_Them);
             this.Name = "frm_NXB";
             this.Text = "frm_NXB";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_NXB_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

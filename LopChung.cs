@@ -11,7 +11,7 @@ namespace QuanLySach
    /* phamquangngadeptrai*/
     internal class LopChung
     {
-        string chuoikn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""E:\Đồ Án\LaptrinhNet\QuanLySach\QuanLySach\QLSach.mdf"";Integrated Security=True";
+        string chuoikn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""E:\Đồ Án\LaptrinhNet\QLsach\QLsach.mdf"";Integrated Security=True";
         SqlConnection conn;
         public LopChung()
         {

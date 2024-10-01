@@ -335,6 +335,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1424, 862);
+            this.ControlBox = false;
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btn_HienThi);
             this.Controls.Add(this.dtgv_sach);
