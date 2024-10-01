@@ -36,8 +36,8 @@ namespace QLsach
             Form s = Application.OpenForms["frm_Sanpham"];
             if (s != null)
             {
-               // s.Close();
-                  s.Hide(); // giữ ở bộ nhớ
+                s.Close();
+                  //s.Hide(); // giữ ở bộ nhớ
             }
             if (Application.OpenForms["frm_Sach"] == null)
             {

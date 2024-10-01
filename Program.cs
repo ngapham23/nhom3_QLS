@@ -16,7 +16,7 @@ namespace QLsach
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_Trangchu());
+            Application.Run(new frm_Dangnhap());
         }
     }
 }
