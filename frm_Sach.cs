@@ -15,17 +15,15 @@ namespace QuanLySach
         public frm_Sach()
         {
             InitializeComponent();
+            BringToFront();
         }
         private void OpenChildForm()
         {
-            // Tạo form con
+            
             frm_Sach frm = new frm_Sach();
 
-
-            // Đặt form con vừa với giao diện cha mà không che MenuStrip
             frm.Dock = DockStyle.Fill;
 
-            // Ẩn viền và thanh tiêu đề của form con nếu cần
             frm.FormBorderStyle = FormBorderStyle.None;
 
         }
@@ -33,6 +31,18 @@ namespace QuanLySach
         LopChung lopchung = new LopChung();
         private void btn_them_Click(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrWhiteSpace(txt_MaSach.Text) ||
+            string.IsNullOrWhiteSpace(txt_TenSach.Text) ||
+            string.IsNullOrWhiteSpace(txt_SoLuong.Text) ||
+            string.IsNullOrWhiteSpace(txt_GiaBan.Text) ||
+            cb_MaTheLoai.SelectedValue == null ||
+            cb_MaNXB.SelectedValue == null ||
+            cb_MaTacGia.SelectedValue == null)
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin .", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string sql = "Insert into Sach values ('" + txt_MaSach.Text + "',N'" + txt_TenSach.Text + "',N'" + txt_SoLuong.Text + "',N'" + txt_GiaBan.Text + "', N'" + cb_MaTheLoai.SelectedValue + "', N'" + cb_MaNXB.SelectedValue + "',N'" + cb_MaTacGia.SelectedValue + "' )";
             int kq = lopchung.themsuaxoa(sql);
             if (kq >= 1) MessageBox.Show("Thêm sách thành công");
@@ -43,10 +53,29 @@ namespace QuanLySach
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
-            string sql = "UPDATE Sach SET TenSach = '" + txt_TenSach.Text + "', SoLuong = '" + txt_SoLuong.Text + "',GiaBan = '"+txt_GiaBan.Text+"', MaTheLoai = '"+ cb_MaTheLoai.SelectedValue + "', MaNXB = '"+ cb_MaNXB.SelectedValue + "', MaTacGia = '"+ cb_MaTacGia.SelectedValue + "' WHERE MaSach = '" + txt_MaSach.Text + "'";
+            if (string.IsNullOrWhiteSpace(txt_MaSach.Text) ||
+            string.IsNullOrWhiteSpace(txt_TenSach.Text) ||
+            string.IsNullOrWhiteSpace(txt_SoLuong.Text) ||
+            string.IsNullOrWhiteSpace(txt_GiaBan.Text) ||
+            cb_MaTheLoai.SelectedValue == null || 
+            cb_MaNXB.SelectedValue == null ||      
+            cb_MaTacGia.SelectedValue == null)     
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin .", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string sql = "UPDATE Sach SET TenSach = '" + txt_TenSach.Text +
+                 "', SoLuong = '" + txt_SoLuong.Text +
+                 "', GiaBan = '" + txt_GiaBan.Text +
+                 "', MaTheLoai = '" + cb_MaTheLoai.SelectedValue +
+                 "', MaNXB = '" + cb_MaNXB.SelectedValue +
+                 "', MaTacGia = '" + cb_MaTacGia.SelectedValue +
+                 "' WHERE MaSach = '" + txt_MaSach.Text + "'";
             int kq = lopchung.themsuaxoa(sql);
-            if (kq >= 1) MessageBox.Show("Cập nhật sách thành công");
-            else MessageBox.Show("Cập nhật tác giả thất bại");
+            if (kq >= 1)
+                MessageBox.Show("Cập nhật sách thành công");
+            else
+                MessageBox.Show("Cập nhật sách thất bại");
             LoadSach();
 
         }
@@ -99,6 +128,8 @@ namespace QuanLySach
 
         private void frm_Sach_Load(object sender, EventArgs e)
         {
+          
+            this.theLoaiTableAdapter.Fill(this.qLsachDataSet.TheLoai);
             LoadSach();
             LoadTheLoai();
             LoadNXB();
@@ -126,7 +157,7 @@ namespace QuanLySach
 
         private void txt_timkiem_TextChanged(object sender, EventArgs e)
         {
-            load_TimKiem();
+           
         }
 
         private void btn_timkiem_Click(object sender, EventArgs e)
@@ -137,6 +168,11 @@ namespace QuanLySach
         private void btn_HienThi_Click(object sender, EventArgs e)
         {
             LoadSach();
+        }
+
+        private void txt_MaSach_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

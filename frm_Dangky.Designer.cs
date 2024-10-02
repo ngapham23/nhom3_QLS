@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_matkhau = new System.Windows.Forms.TextBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // txt_taikhoan
@@ -80,11 +81,24 @@
             this.txt_matkhau.TabIndex = 0;
             this.txt_matkhau.UseSystemPasswordChar = true;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(367, 192);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(56, 16);
+            this.linkLabel1.TabIndex = 4;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Quay lại";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // frm_Dangky
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(706, 346);
+            this.ControlBox = false;
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_dangky);
@@ -92,6 +106,8 @@
             this.Controls.Add(this.txt_taikhoan);
             this.Name = "frm_Dangky";
             this.Text = "frm_Dangky";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Dangky_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_Dangky_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,5 +120,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_matkhau;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

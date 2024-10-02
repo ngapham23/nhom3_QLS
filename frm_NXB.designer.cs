@@ -148,11 +148,11 @@
             // dt_GridNXB
             // 
             this.dt_GridNXB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dt_GridNXB.Location = new System.Drawing.Point(221, 298);
+            this.dt_GridNXB.Location = new System.Drawing.Point(158, 308);
             this.dt_GridNXB.Margin = new System.Windows.Forms.Padding(4);
             this.dt_GridNXB.Name = "dt_GridNXB";
             this.dt_GridNXB.RowHeadersWidth = 51;
-            this.dt_GridNXB.Size = new System.Drawing.Size(527, 480);
+            this.dt_GridNXB.Size = new System.Drawing.Size(595, 480);
             this.dt_GridNXB.TabIndex = 8;
             this.dt_GridNXB.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dt_GridNXB_CellClick);
             // 

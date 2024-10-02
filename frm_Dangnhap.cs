@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLySach;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace QLsach
     {
         public frm_Dangnhap()
         {
+
             InitializeComponent();
             
         }
@@ -36,7 +38,7 @@ namespace QLsach
 
         private void btn_dangnhap_Click(object sender, EventArgs e)
         {
-            string chuoikn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""E:\Đồ Án\LaptrinhNet\QLsach\QLSach.mdf"";Integrated Security=True";
+            string chuoikn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""E:\Đồ Án\LaptrinhNet\QLsach\QLsach.mdf"";Integrated Security=True";
             SqlConnection conn = new SqlConnection(chuoikn);
             try
             {
@@ -66,20 +68,21 @@ namespace QLsach
             }
         }
 
-        private void btn_dangky_Click(object sender, EventArgs e)
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
+            
 
-            if (Application.OpenForms["frm_Dangky"] == null)
-            {
-             
+
+            
+
                 frm_Dangky frmDangKy = new frm_Dangky();
-                frmDangKy.Show();  
-            }
-            else
-            {
-                Application.OpenForms["frm_Dangky"].Activate();
-            }
+                frmDangKy.Show();
+                this.Hide();
+
+            
+           
         }
     }
 }

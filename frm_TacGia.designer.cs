@@ -95,9 +95,9 @@
             this.lbl_lienlac.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_lienlac.Location = new System.Drawing.Point(27, 171);
             this.lbl_lienlac.Name = "lbl_lienlac";
-            this.lbl_lienlac.Size = new System.Drawing.Size(80, 22);
+            this.lbl_lienlac.Size = new System.Drawing.Size(87, 22);
             this.lbl_lienlac.TabIndex = 4;
-            this.lbl_lienlac.Text = "Liên lạc:";
+            this.lbl_lienlac.Text = "Quốc gia:";
             // 
             // txt_mtg
             // 

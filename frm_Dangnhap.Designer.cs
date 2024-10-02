@@ -34,7 +34,7 @@
             this.txt_matkhau = new System.Windows.Forms.TextBox();
             this.btn_dangnhap = new System.Windows.Forms.Button();
             this.btn_thoat = new System.Windows.Forms.Button();
-            this.btn_dangky = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -93,22 +93,23 @@
             this.btn_thoat.UseVisualStyleBackColor = true;
             this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
             // 
-            // btn_dangky
+            // linkLabel1
             // 
-            this.btn_dangky.Location = new System.Drawing.Point(391, 203);
-            this.btn_dangky.Name = "btn_dangky";
-            this.btn_dangky.Size = new System.Drawing.Size(110, 25);
-            this.btn_dangky.TabIndex = 6;
-            this.btn_dangky.Text = "Đăng Ký";
-            this.btn_dangky.UseVisualStyleBackColor = true;
-            this.btn_dangky.Click += new System.EventHandler(this.btn_dangky_Click);
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(299, 222);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(248, 16);
+            this.linkLabel1.TabIndex = 7;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Hãy tạo tài khoản admin dể quản lý sách";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // frm_Dangnhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btn_dangky);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btn_thoat);
             this.Controls.Add(this.btn_dangnhap);
             this.Controls.Add(this.txt_matkhau);
@@ -130,7 +131,7 @@
         private System.Windows.Forms.TextBox txt_matkhau;
         private System.Windows.Forms.Button btn_dangnhap;
         private System.Windows.Forms.Button btn_thoat;
-        private System.Windows.Forms.Button btn_dangky;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

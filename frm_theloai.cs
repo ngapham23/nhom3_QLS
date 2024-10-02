@@ -15,11 +15,19 @@ namespace QuanLySach
         public frm_TheLoai()
         {
             InitializeComponent();
+
         }
 
         LopChung LopChung = new LopChung();
         private void btn_them_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txt_matheloai.Text) ||
+            string.IsNullOrWhiteSpace(txt_tentheloai.Text))
+            {
+
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin .", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string sql = "Insert into TheLoai values ('" + txt_matheloai.Text + "',N'" + txt_tentheloai.Text + "')";
             int kq = LopChung.themsuaxoa(sql);
             if (kq >= 1) MessageBox.Show("Thêm thể loại thành công");
@@ -29,6 +37,13 @@ namespace QuanLySach
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txt_matheloai.Text) ||
+            string.IsNullOrWhiteSpace(txt_tentheloai.Text))
+            {
+
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin .", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string sql = "UPDATE TheLoai SET Tentheloai = N'" +txt_tentheloai.Text+ "' WHERE MaTheLoai = '" + txt_matheloai.Text + "'";
             int kq = LopChung.themsuaxoa(sql);
             if (kq >= 1) MessageBox.Show("Sửa thể loại thành công");
@@ -38,8 +53,14 @@ namespace QuanLySach
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
-            string sql = "DELETE FROM TheLoai WHERE MaTheLoai = '" + txt_matheloai.Text + "'";
-            int kq = LopChung.themsuaxoa(sql);
+            string sqlDeleteSach = "DELETE FROM Sach WHERE MaTheLoai = '" + txt_matheloai.Text + "'";
+            LopChung.themsuaxoa(sqlDeleteSach);
+
+            
+            string sqlDeleteTheLoai = "DELETE FROM TheLoai WHERE MaTheLoai = '" + txt_matheloai.Text + "'";
+            int kq = LopChung.themsuaxoa(sqlDeleteTheLoai);
+
+            
             if (kq >= 1) MessageBox.Show("Xóa thể loại thành công");
             else MessageBox.Show("Xóa thể loại thất bại");
             LoatTL();

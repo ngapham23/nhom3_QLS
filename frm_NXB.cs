@@ -25,6 +25,14 @@ namespace QuanLySach
         }
         private void btn_Them_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txt_TenNXB.Text) ||
+           string.IsNullOrWhiteSpace(txt_DiaChi.Text) ||
+           string.IsNullOrWhiteSpace(txt_SoDienThoai.Text) ||
+           string.IsNullOrWhiteSpace(txt_MaNXB.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string sql = "Insert into NhaXuatBan values ('" + txt_MaNXB.Text + "',N'" + txt_TenNXB.Text + "',N'" + txt_DiaChi.Text + "',N'" + txt_SoDienThoai.Text + "')";
             int kq = lopchung.themsuaxoa(sql);
             if (kq >= 1) MessageBox.Show("Thêm Nhà xuất bản thành công");
@@ -34,8 +42,12 @@ namespace QuanLySach
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
-            string sql = "Delete NhaXuatBan where MaNXB = '" + txt_MaNXB.Text + "'";
-            int kq = lopchung.themsuaxoa(sql);
+            string sqlDeleteSach = "DELETE FROM Sach WHERE MaTheLoai = '" + txt_MaNXB.Text + "'";
+            lopchung.themsuaxoa(sqlDeleteSach);
+
+            string sqlDeleteTheLoai = "DELETE FROM TheLoai WHERE MaTheLoai = '" + txt_MaNXB.Text + "'";
+            int kq = lopchung.themsuaxoa(sqlDeleteTheLoai);
+
             if (kq >= 1) MessageBox.Show("Xóa Nhà xuất bản thành công");
             else MessageBox.Show("Xóa Nhà xuất bản thất bại");
             LoadNXB();
@@ -43,7 +55,17 @@ namespace QuanLySach
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            string sql = "Update NhaXuatBan set TenNXB = N'" + txt_TenNXB.Text + "', DiaChi = N'" + txt_DiaChi.Text + "', DienThoai = N'" + txt_SoDienThoai.Text + "' where MaNXB = '" + txt_MaNXB.Text + "'";
+            if (string.IsNullOrWhiteSpace(txt_TenNXB.Text) ||
+            string.IsNullOrWhiteSpace(txt_DiaChi.Text) ||
+            string.IsNullOrWhiteSpace(txt_SoDienThoai.Text) ||
+            string.IsNullOrWhiteSpace(txt_MaNXB.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string sql = 
+                "Update NhaXuatBan set TenNXB = N'" + txt_TenNXB.Text + "', DiaChi = N'" + txt_DiaChi.Text + "', " +
+                "DienThoai = N'" + txt_SoDienThoai.Text + "' where MaNXB = '" + txt_MaNXB.Text + "'";
             int kq = lopchung.themsuaxoa(sql);
             if (kq >= 1) MessageBox.Show("Sửa Nhà xuất bản thành công");
             else MessageBox.Show("Sửa Nhà xuất bản thất bại");

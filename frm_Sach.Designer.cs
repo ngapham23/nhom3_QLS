@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dtgv_sach = new System.Windows.Forms.DataGridView();
             this.btn_timkiem = new System.Windows.Forms.Button();
             this.txt_timkiem = new System.Windows.Forms.TextBox();
@@ -38,6 +39,8 @@
             this.cb_MaNXB = new System.Windows.Forms.ComboBox();
             this.cb_MaTacGia = new System.Windows.Forms.ComboBox();
             this.cb_MaTheLoai = new System.Windows.Forms.ComboBox();
+            this.theLoaiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLsachDataSet = new QLsach.QLsachDataSet();
             this.txt_GiaBan = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_SoLuong = new System.Windows.Forms.TextBox();
@@ -52,8 +55,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_HienThi = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.lopChungBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.frmTheLoaiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.theLoaiTableAdapter = new QLsach.QLsachDataSetTableAdapters.TheLoaiTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_sach)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.theLoaiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLsachDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lopChungBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frmTheLoaiBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dtgv_sach
@@ -175,11 +185,22 @@
             // 
             // cb_MaTheLoai
             // 
+            this.cb_MaTheLoai.DataSource = this.theLoaiBindingSource;
             this.cb_MaTheLoai.FormattingEnabled = true;
             this.cb_MaTheLoai.Location = new System.Drawing.Point(184, 270);
             this.cb_MaTheLoai.Name = "cb_MaTheLoai";
             this.cb_MaTheLoai.Size = new System.Drawing.Size(297, 32);
             this.cb_MaTheLoai.TabIndex = 30;
+            // 
+            // theLoaiBindingSource
+            // 
+            this.theLoaiBindingSource.DataMember = "TheLoai";
+            this.theLoaiBindingSource.DataSource = this.qLsachDataSet;
+            // 
+            // qLsachDataSet
+            // 
+            this.qLsachDataSet.DataSetName = "QLsachDataSet";
+            this.qLsachDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txt_GiaBan
             // 
@@ -227,6 +248,7 @@
             this.txt_MaSach.Name = "txt_MaSach";
             this.txt_MaSach.Size = new System.Drawing.Size(297, 32);
             this.txt_MaSach.TabIndex = 6;
+            this.txt_MaSach.TextChanged += new System.EventHandler(this.txt_MaSach_TextChanged);
             // 
             // label7
             // 
@@ -329,6 +351,18 @@
             this.label10.TabIndex = 13;
             this.label10.Text = "Nhập tên sách";
             // 
+            // lopChungBindingSource
+            // 
+            this.lopChungBindingSource.DataSource = typeof(QuanLySach.LopChung);
+            // 
+            // frmTheLoaiBindingSource
+            // 
+            this.frmTheLoaiBindingSource.DataSource = typeof(QuanLySach.frm_TheLoai);
+            // 
+            // theLoaiTableAdapter
+            // 
+            this.theLoaiTableAdapter.ClearBeforeFill = true;
+            // 
             // frm_Sach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -353,6 +387,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_sach)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.theLoaiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLsachDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lopChungBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frmTheLoaiBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,5 +421,10 @@
         private System.Windows.Forms.ComboBox cb_MaNXB;
         private System.Windows.Forms.ComboBox cb_MaTacGia;
         private System.Windows.Forms.ComboBox cb_MaTheLoai;
+        private System.Windows.Forms.BindingSource frmTheLoaiBindingSource;
+        private System.Windows.Forms.BindingSource lopChungBindingSource;
+        private QLsach.QLsachDataSet qLsachDataSet;
+        private System.Windows.Forms.BindingSource theLoaiBindingSource;
+        private QLsach.QLsachDataSetTableAdapters.TheLoaiTableAdapter theLoaiTableAdapter;
     }
 }

@@ -48,7 +48,7 @@
             // btn_xoa
             // 
             this.btn_xoa.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xoa.Location = new System.Drawing.Point(763, 387);
+            this.btn_xoa.Location = new System.Drawing.Point(981, 569);
             this.btn_xoa.Name = "btn_xoa";
             this.btn_xoa.Size = new System.Drawing.Size(114, 38);
             this.btn_xoa.TabIndex = 11;
@@ -59,7 +59,7 @@
             // btn_sua
             // 
             this.btn_sua.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sua.Location = new System.Drawing.Point(614, 387);
+            this.btn_sua.Location = new System.Drawing.Point(832, 569);
             this.btn_sua.Name = "btn_sua";
             this.btn_sua.Size = new System.Drawing.Size(114, 38);
             this.btn_sua.TabIndex = 10;
@@ -70,7 +70,7 @@
             // btn_them
             // 
             this.btn_them.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_them.Location = new System.Drawing.Point(462, 387);
+            this.btn_them.Location = new System.Drawing.Point(680, 569);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(114, 38);
             this.btn_them.TabIndex = 9;
@@ -85,7 +85,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(497, 160);
+            this.groupBox1.Location = new System.Drawing.Point(715, 342);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(380, 178);
             this.groupBox1.TabIndex = 8;
@@ -127,7 +127,7 @@
             // data_dvtl
             // 
             this.data_dvtl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data_dvtl.Location = new System.Drawing.Point(12, 160);
+            this.data_dvtl.Location = new System.Drawing.Point(230, 342);
             this.data_dvtl.Name = "data_dvtl";
             this.data_dvtl.RowHeadersWidth = 51;
             this.data_dvtl.Size = new System.Drawing.Size(394, 344);
@@ -138,7 +138,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(296, 33);
+            this.label1.Location = new System.Drawing.Point(514, 215);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(188, 25);
             this.label1.TabIndex = 6;
@@ -147,7 +147,7 @@
             // txt_TimKiem
             // 
             this.txt_TimKiem.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TimKiem.Location = new System.Drawing.Point(648, 83);
+            this.txt_TimKiem.Location = new System.Drawing.Point(866, 265);
             this.txt_TimKiem.Name = "txt_TimKiem";
             this.txt_TimKiem.Size = new System.Drawing.Size(209, 33);
             this.txt_TimKiem.TabIndex = 4;
@@ -156,7 +156,7 @@
             // btn_HienThi
             // 
             this.btn_HienThi.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_HienThi.Location = new System.Drawing.Point(12, 116);
+            this.btn_HienThi.Location = new System.Drawing.Point(230, 298);
             this.btn_HienThi.Name = "btn_HienThi";
             this.btn_HienThi.Size = new System.Drawing.Size(181, 38);
             this.btn_HienThi.TabIndex = 12;
@@ -168,9 +168,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(506, 86);
+            this.label4.Location = new System.Drawing.Point(724, 268);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 26);
+            this.label4.Size = new System.Drawing.Size(101, 25);
             this.label4.TabIndex = 4;
             this.label4.Text = "Tìm Kiếm";
             // 
@@ -179,7 +179,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(894, 531);
+            this.ClientSize = new System.Drawing.Size(1570, 919);
+            this.ControlBox = false;
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_HienThi);
             this.Controls.Add(this.txt_TimKiem);
@@ -189,8 +190,11 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.data_dvtl);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frm_TheLoai";
             this.Text = "frm_TheLoai";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_TheLoai_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
