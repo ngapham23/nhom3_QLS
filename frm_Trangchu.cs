@@ -22,7 +22,7 @@ namespace QLsach
             InitializeComponent();
 
             this.BackgroundImageLayout = ImageLayout.Stretch;
-            LoadGifFromUrl("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXFpa2dybjh2NXQwNHI0OGxtenFpN3Y4bmllNWp3d3dmc2xjcTN6MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sIIhZliB2McAo/giphy.gif");
+            /*LoadGifFromUrl("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXFpa2dybjh2NXQwNHI0OGxtenFpN3Y4bmllNWp3d3dmc2xjcTN6MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sIIhZliB2McAo/giphy.gif");*/
 
         }
 
@@ -168,9 +168,9 @@ namespace QLsach
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+       /* private void pictureBox1_Click(object sender, EventArgs e)
         {
-          /*  timer = new Timer();
+          *//*  timer = new Timer();
             timer.Interval = 100; // Thời gian kiểm tra (ms)
             timer.Tick += pictureBox1_Click;
             timer.Start();
@@ -181,7 +181,7 @@ namespace QLsach
             {
                 pictureBox1.Left = -pictureBox1.Width;
             }
-            pictureBox1.Invalidate();*/
+            pictureBox1.Invalidate();*//*
         }
 
 
@@ -210,7 +210,7 @@ namespace QLsach
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
-        }
+        }*/
         /* private void pictureBox1_Paint(object sender, PaintEventArgs e)
 {
     Graphics g = e.Graphics;

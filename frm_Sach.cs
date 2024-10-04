@@ -174,5 +174,15 @@ namespace QuanLySach
         {
 
         }
+
+        private void dtgv_sach_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void cb_MaTheLoai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -79,6 +79,7 @@
             this.dtgv_sach.Size = new System.Drawing.Size(739, 617);
             this.dtgv_sach.TabIndex = 27;
             this.dtgv_sach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_sach_CellClick);
+            this.dtgv_sach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_sach_CellContentClick);
             // 
             // btn_timkiem
             // 
@@ -191,6 +192,7 @@
             this.cb_MaTheLoai.Name = "cb_MaTheLoai";
             this.cb_MaTheLoai.Size = new System.Drawing.Size(297, 32);
             this.cb_MaTheLoai.TabIndex = 30;
+            this.cb_MaTheLoai.SelectedIndexChanged += new System.EventHandler(this.cb_MaTheLoai_SelectedIndexChanged);
             // 
             // theLoaiBindingSource
             // 
