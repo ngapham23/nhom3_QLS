@@ -40,7 +40,7 @@ namespace QuanLySach
             cb_MaNXB.SelectedValue == null ||
             cb_MaTacGia.SelectedValue == null)
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin .", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin .", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error); //thay error hoặc warning đều được..
                 return;
             }
             string sql = "Insert into Sach values ('" + txt_MaSach.Text + "',N'" + txt_TenSach.Text + "',N'" + txt_SoLuong.Text + "',N'" + txt_GiaBan.Text + "', N'" + cb_MaTheLoai.SelectedValue + "', N'" + cb_MaNXB.SelectedValue + "',N'" + cb_MaTacGia.SelectedValue + "' )";
@@ -61,7 +61,7 @@ namespace QuanLySach
             cb_MaNXB.SelectedValue == null ||      
             cb_MaTacGia.SelectedValue == null)     
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin .", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin .", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             string sql = "UPDATE Sach SET TenSach = '" + txt_TenSach.Text +
@@ -181,6 +181,11 @@ namespace QuanLySach
         }
 
         private void cb_MaTheLoai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cb_MaNXB_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

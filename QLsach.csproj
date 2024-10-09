@@ -73,11 +73,23 @@
     <Compile Include="frm_Dangnhap.Designer.cs">
       <DependentUpon>frm_Dangnhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_MuonTraSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_MuonTraSach.Designer.cs">
+      <DependentUpon>frm_MuonTraSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_NXB.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_NXB.designer.cs">
       <DependentUpon>frm_NXB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Quanlydocgia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Quanlydocgia.Designer.cs">
+      <DependentUpon>frm_Quanlydocgia.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Sach.cs">
       <SubType>Form</SubType>
@@ -117,8 +129,14 @@
     <EmbeddedResource Include="frm_Dangnhap.resx">
       <DependentUpon>frm_Dangnhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_MuonTraSach.resx">
+      <DependentUpon>frm_MuonTraSach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_NXB.resx">
       <DependentUpon>frm_NXB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Quanlydocgia.resx">
+      <DependentUpon>frm_Quanlydocgia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Sach.resx">
       <DependentUpon>frm_Sach.cs</DependentUpon>

@@ -168,49 +168,101 @@ namespace QLsach
 
         }
 
-       /* private void pictureBox1_Click(object sender, EventArgs e)
+        private void mượnTrảSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          *//*  timer = new Timer();
-            timer.Interval = 100; // Thời gian kiểm tra (ms)
-            timer.Tick += pictureBox1_Click;
-            timer.Start();
-            pictureBox1.Left += 100;
-
-          
-            if (pictureBox1.Left > this.Width)
+            foreach (Form form in this.MdiChildren)
             {
-                pictureBox1.Left = -pictureBox1.Width;
-            }
-            pictureBox1.Invalidate();*//*
-        }
-
-
-        private void LoadGifFromUrl(string url)
-        {
-            try
-            {
-                // Tải GIF từ URL
-                using (WebClient webClient = new WebClient())
+                if (form.Name != "frm_MuonTraSach")
                 {
-                    // Tải ảnh GIF và lưu vào tệp tạm thời
-                    string tempFilePath = Path.Combine(Path.GetTempPath(), "temp.gif");
-                    webClient.DownloadFile(url, tempFilePath);
-
-                    // Gán ảnh GIF cho PictureBox từ tệp tạm
-                    pictureBox1.Image = Image.FromFile(tempFilePath);
-                  
+                    form.Close();
+                    // Hoặc form.Hide(); nếu  muốn giữ form trong bộ nhớ
                 }
             }
-            catch (Exception ex)
+
+
+            if (Application.OpenForms["frm_MuonTraSach"] == null)
             {
-                MessageBox.Show($"Lỗi: {ex.Message}");
+                frm_MuonTraSach sach = new frm_MuonTraSach();
+                sach.FormBorderStyle = FormBorderStyle.None;
+                sach.Dock = DockStyle.Fill;
+                sach.MdiParent = this;
+                sach.Show();
+            }
+            else
+            {
+                Application.OpenForms["frm_MuonTraSach"].Activate();
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void độcGiảToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name != "frm_Quanlydocgia")
+                {
+                    form.Close();
+                    // Hoặc form.Hide(); nếu  muốn giữ form trong bộ nhớ
+                }
+            }
 
-        }*/
+
+            if (Application.OpenForms["frm_Quanlydocgia"] == null)
+            {
+                frm_Quanlydocgia sach = new frm_Quanlydocgia();
+                sach.FormBorderStyle = FormBorderStyle.None;
+                sach.Dock = DockStyle.Fill;
+                sach.MdiParent = this;
+                sach.Show();
+            }
+            else
+            {
+                Application.OpenForms["frm_Quanlydocgia"].Activate();
+            }
+        }
+
+        /* private void pictureBox1_Click(object sender, EventArgs e)
+         {
+           *//*  timer = new Timer();
+             timer.Interval = 100; // Thời gian kiểm tra (ms)
+             timer.Tick += pictureBox1_Click;
+             timer.Start();
+             pictureBox1.Left += 100;
+
+
+             if (pictureBox1.Left > this.Width)
+             {
+                 pictureBox1.Left = -pictureBox1.Width;
+             }
+             pictureBox1.Invalidate();*//*
+         }
+
+
+         private void LoadGifFromUrl(string url)
+         {
+             try
+             {
+                 // Tải GIF từ URL
+                 using (WebClient webClient = new WebClient())
+                 {
+                     // Tải ảnh GIF và lưu vào tệp tạm thời
+                     string tempFilePath = Path.Combine(Path.GetTempPath(), "temp.gif");
+                     webClient.DownloadFile(url, tempFilePath);
+
+                     // Gán ảnh GIF cho PictureBox từ tệp tạm
+                     pictureBox1.Image = Image.FromFile(tempFilePath);
+
+                 }
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show($"Lỗi: {ex.Message}");
+             }
+         }
+
+         private void pictureBox2_Click(object sender, EventArgs e)
+         {
+
+         }*/
         /* private void pictureBox1_Paint(object sender, PaintEventArgs e)
 {
     Graphics g = e.Graphics;

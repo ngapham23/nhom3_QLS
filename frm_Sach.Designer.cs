@@ -176,6 +176,7 @@
             this.cb_MaNXB.Name = "cb_MaNXB";
             this.cb_MaNXB.Size = new System.Drawing.Size(297, 32);
             this.cb_MaNXB.TabIndex = 32;
+            this.cb_MaNXB.SelectedIndexChanged += new System.EventHandler(this.cb_MaNXB_SelectedIndexChanged);
             // 
             // cb_MaTacGia
             // 

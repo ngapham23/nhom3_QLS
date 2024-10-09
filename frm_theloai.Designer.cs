@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TheLoai));
             this.btn_xoa = new System.Windows.Forms.Button();
             this.btn_sua = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
@@ -179,6 +180,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1570, 919);
             this.ControlBox = false;
             this.Controls.Add(this.label4);
