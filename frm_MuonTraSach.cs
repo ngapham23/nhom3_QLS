@@ -31,8 +31,8 @@ namespace QLsach
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            string ngayMuon = date_muon.Value.ToString("yyyy-MM-dd");
-            string ngayTra = date_tra.Value.ToString("yyyy-MM-dd");
+            string ngayMuon = date_muon.Value.ToString("dd-MM-yyyy");
+            string ngayTra = date_tra.Value.ToString("dd-MM-yyyy");
             string maDocGia = txt_madocgia.Text;
             string tinhTrang = cb_tinhtrang.Text;
 
@@ -41,7 +41,7 @@ namespace QLsach
             string sql = "INSERT INTO MuonTraSach (MaSach, MaDocGia, NgayMuon, NgayTra, TinhTrang) " +
                "VALUES ('" + txt_masach.Text + "', '" + maDocGia + "', '" + ngayMuon + "', '" + ngayTra + "', N'" + tinhTrang + "')";
 
-            // Gọi phương thức themsuaxoa để thực hiện thêm bản ghi
+        
             int kq = lopchung.themsuaxoa(sql);
 
             if (kq > 0)
@@ -69,8 +69,8 @@ namespace QLsach
         {
             string maMuonTra = dtgv_muontrasach.CurrentRow.Cells["MaMuonTra"].Value.ToString(); //lấy từ data grid view ,ko cần thêm nút ở giao diện
             string maDocGia = txt_madocgia.Text;
-            string ngayMuon = date_muon.Value.ToString("yyyy-MM-dd");
-            string ngayTra = date_tra.Value.ToString("yyyy-MM-dd");
+            string ngayMuon = date_muon.Value.ToString("dd-MM-yyyy");
+            string ngayTra = date_tra.Value.ToString("dd-MM-yyyy");
 
             string tinhTrang = cb_tinhtrang.Text;
 
@@ -104,5 +104,35 @@ namespace QLsach
                 cb_tinhtrang.Text = row.Cells["TinhTrang"].Value.ToString();
             }
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            load_TimKiem();
+        }
+        public void load_TimKiem()
+        {
+
+            string sql = "Select * from MuonTraSach where MaSach like '%" + txt_timkiem.Text + "%'";
+            if (sql == null)
+            {
+                MessageBox.Show("Tìm kiếm không có trong danh sách");
+            }
+            else {
+                DataTable dt = lopchung.LoadDL(sql);
+                dtgv_muontrasach.DataSource = dt;
+            }
+
+        }
+
     }
 }
